@@ -17,4 +17,4 @@ RUN cd /tmp && \
     rm ./kibana-3.1.2.tar.gz
 
 # Expose port for web console access
-EXPOSE 8888
+EXPOSE 80
