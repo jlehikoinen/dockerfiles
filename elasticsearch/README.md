@@ -1,5 +1,5 @@
 ElasticSearch
 =============
 
-Base image: centos:centos6
+Base image: dockerfile/java:oracle-java7
 Version: 1.4.0

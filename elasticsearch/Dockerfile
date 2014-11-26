@@ -1,18 +1,10 @@
 # DOCKER-VERSION 1.3.1
 
 # Base image
-FROM centos:centos6
+FROM dockerfile/java:oracle-java7
 
-# Update OS
-RUN yum update -y
-
-# Install tar, wget & Java 7
-RUN yum -y install tar
-RUN yum -y install wget
-RUN yum -y install java-1.7.0-openjdk.x86_64
-
-# Set JAVA_HOME variable
-ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk.x86_64
+# Variable
+# ENV ES_PKG_NAME elasticsearch-1.4.0
 
 # Install ElasticSearch
 RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.0.tar.gz -O elasticsearch.tar.gz && tar zxf elasticsearch.tar.gz && mv elasticsearch-* /opt/elasticsearch && rm -rf /tmp/*
