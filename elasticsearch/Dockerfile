@@ -11,6 +11,9 @@ RUN yum -y install tar
 RUN yum -y install wget
 RUN yum -y install java-1.7.0-openjdk.x86_64
 
+# Set JAVA_HOME variable
+ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk.x86_64
+
 # Install ElasticSearch
 RUN wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-1.4.0.tar.gz -O elasticsearch.tar.gz && tar zxf elasticsearch.tar.gz && mv elasticsearch-* /opt/elasticsearch && rm -rf /tmp/*
 
