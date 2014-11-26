@@ -10,8 +10,8 @@ RUN apt-get update
 RUN apt-get install -y wget ca-certificates
 
 # Install Kibana
-RUN cd /tmp \
-    wget https://download.elasticsearch.org/kibana/kibana/kibana-3.1.2.tar.gz \
+RUN cd /tmp && \
+    wget https://download.elasticsearch.org/kibana/kibana/kibana-3.1.2.tar.gz && \
     tar xzvf kibana-3.1.2.tar.gz && \
     mv ./kibana-3.1.2 /usr/share/nginx/html/ && \
     rm ./kibana-3.1.2.tar.gz
