@@ -1,4 +1,4 @@
 Dockerfiles
 ===========
 
-Mostly for testing
+Test driving Docker with ELK stack.
